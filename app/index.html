@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Electron Markdown Editor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section class="controls">
+        <button id="new-file">New File</button>
+        <button id="open-file">Open File</button>
+        <button id="save-markdown" disabled>Save File</button>
+        <button id="revert" disabled>Revert</button>
+        <button id="save-html">Save HTML</button>
+        <button id="show-file" disabled>Show File</button>
+        <button id="open-in-default" disabled>Open in Default Application</button>
+    </section>
+
+    <section class="content">
+        <label for="markdown" hidden>Markdown Content</label>
+        <textarea class="raw-markdown" id="markdown"></textarea>
+        <div class="rendered-html" id="html"></div>
+    </section>
+
+
+    <script>
+        require('./renderer');
+    </script>
+</body>
+</html>
